@@ -1,5 +1,5 @@
-import Header from "./Header";
-
+import Header from "./header/Header";
+import "../app.css";
 function App() {
   return (
     <div className="App">
