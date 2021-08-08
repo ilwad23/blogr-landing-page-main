@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 const NavBar = styled.nav`
   position: absolute;
-  height: 83px !important;
-  width: 1160px;
-  left: 152px;
-  right: 139px;
-  top: 42px;
+  height: 83px;
+  left: 150px;
+  right: 141px;
+  top: 37px;
   padding-right: 25px;
   padding-left: 25px;
   background-color: transparent;
