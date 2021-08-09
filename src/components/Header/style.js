@@ -1,8 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import Nav from "./Nav";
 
-const Hero = styled.div`
+export const Hero = styled.div`
   position: relative;
   width: 1440px;
   height: 600px;
@@ -10,18 +8,18 @@ const Hero = styled.div`
   border-radius: 0px 0px 0px 100px;
   z-index: -100;
 `;
-const BgShapes = styled.img`
+export const BgShapes = styled.img`
   position: absolute;
   z-index: -90;
-`
-const Hook = styled.div`
+`;
+export const Hook = styled.div`
   position: absolute;
   width: 832px;
   height: 271px;
   left: 301px;
   top: 212px;
 `;
-const Title = styled.h1`
+export const Title = styled.h1`
   position: absolute;
   width: 815px;
   height: 78.86px;
@@ -34,7 +32,7 @@ const Title = styled.h1`
   line-height: 92px;
   color: #ffffff;
 `;
-const SubTitle = styled.p`
+export const SubTitle = styled.p`
   position: absolute;
   width: 424px;
   height: 28px;
@@ -48,7 +46,7 @@ const SubTitle = styled.p`
   text-align: center;
   color: #ffffff;
 `;
-const Start = styled.button`
+export const Start = styled.button`
   position: absolute;
   width: 139px;
   height: 52px;
@@ -64,7 +62,7 @@ const Start = styled.button`
   line-height: 18px;
   color: #ff4d5c;
 `;
-const Learn = styled.button`
+export const Learn = styled.button`
   position: absolute;
   width: 139px;
   height: 46px;
@@ -81,19 +79,3 @@ const Learn = styled.button`
   line-height: 18px;
   color: #fbf9fb;
 `;
-function Header() {
-  return (
-    <Hero>
-      <BgShapes src={`./images/bg-shapes-desktop.svg`} alt="logo" />
-      <Nav />
-      <Hook>
-        <Title>A modern publishing platform</Title>
-        <SubTitle>Grow your audience and build your online brand</SubTitle>
-        <Start>Start for Free</Start>
-        <Learn>Learn More</Learn>
-      </Hook>
-    </Hero>
-  );
-}
-
-export default Header;
