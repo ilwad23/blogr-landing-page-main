@@ -13,6 +13,7 @@ export const Hero = styled.div`
   width: 375px;
   height: 525px;
   border-radius: 0px 0px 0px 90px;
+  overflow-y: hidden;
   }
 `;
 export const BgShapes = styled.img``;
