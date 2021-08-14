@@ -1,13 +1,13 @@
 import React from "react";
 import { Hero, BgShapes, Hook, Title, SubTitle, Start, Learn } from "./style";
-import Nav from "./Nav/";
+import Nav from "../Nav";
 import "../../app.css"
 
-function Header() {
+function Header({ desktopOrMobile }) {
   return (
     <Hero>
-      <BgShapes src={`./images/bg-shapes-desktop.svg`} alt="logo" />
-      <Nav />
+      <BgShapes src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt="logo" />
+      <Nav desktopOrMobile={desktopOrMobile} />
       <Hook>
         <Title>A modern publishing platform</Title>
         <SubTitle>Grow your audience and build your online brand</SubTitle>
