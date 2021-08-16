@@ -18,7 +18,6 @@ const desktopOrMobile = useScreenSize();
   return (
     <div className="App">
       <Header desktopOrMobile={desktopOrMobile} />
-      <h1>work</h1>
     </div>
   );
 }
