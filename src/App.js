@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header desktopOrMobile={desktopOrMobile} />
+<<<<<<< HEAD
       <Info
         desktopOrMobile={desktopOrMobile}
         title="Designed for the future"
@@ -40,6 +41,10 @@ function App() {
         img="laptop"
       />
       <Footer desktopOrMobile={desktopOrMobile} />
+=======
+      <Info desktopOrMobile={desktopOrMobile} />
+      <Middle desktopOrMobile={desktopOrMobile} />
+>>>>>>> set up middle component
     </div>
   );
 >>>>>>> footer
