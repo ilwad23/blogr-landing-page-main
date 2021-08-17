@@ -16,7 +16,7 @@ export const InfoWrapper = styled.div`
   @media screen and (max-width: 375px) {
     flex-direction: column-reverse;
   }
-  `;
+`;
 export const InfoTitle = styled.h2`
   /* both */
   position: absolute;
@@ -40,18 +40,14 @@ export const InfoTitle = styled.h2`
     line-height: 37px;
     text-align: center;
   }
-  `;
+`;
 export const InfoDivider = styled.div`
   /* desktop */
   @media screen and (min-width: 376px) {
     width: 720px;
     height: 1010px;
   }
-  /* mobile */
-  @media screen and (max-width: 375px) {
-    /* width: 375px; */
-  }
-  `;
+`;
 
 export const InfoContent = styled.div`
   /* desktop */
@@ -89,17 +85,17 @@ export const InfoSubTitle = styled.h3`
   }
   /* mobile */
   @media screen and (max-width: 375px) {
-    position: relative;
     width: 262px;
     height: 60px;
-    left: 57px;
+    margin-left: 57px;
+    font-weight: bold;
+    font-size: 26.5px;
     line-height: 103%;
     text-align: center;
   }
 `;
 export const InfoPara = styled.p`
   /* both */
-
   color: #4b5862;
   font-weight: normal;
   /* desktop */
@@ -107,11 +103,12 @@ export const InfoPara = styled.p`
     font-size: 17px;
     line-height: 26px;
   }
-
   /* mobile */
   @media screen and (max-width: 375px) {
-    width: 375px;
+    width: 279px;
     height: 247px;
+    margin-top: 30px;
+    margin-left: 48px;
     font-size: 15.4px;
     line-height: 24px;
     text-align: center;
