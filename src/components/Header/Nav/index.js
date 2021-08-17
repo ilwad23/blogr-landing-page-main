@@ -55,7 +55,7 @@ function Nav({ desktopOrMobile }) {
                   alt="arrow"
                 />
               </NavMain>
-              <NavDropDownMenu className="a">
+              <NavDropDownMenu>
                 <NavListitem>About</NavListitem>
                 <NavListitem>Team</NavListitem>
                 <NavListitem>Blog</NavListitem>

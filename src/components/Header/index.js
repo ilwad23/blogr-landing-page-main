@@ -1,7 +1,7 @@
 import React from "react";
 import { Hero, BgShapes, Hook, Title, SubTitle, Start, Learn } from "./style";
 import Nav from "./Nav";
-import "../../app.css"
+
 
 function Header({ desktopOrMobile }) {
   return (

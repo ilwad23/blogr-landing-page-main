@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Info from "./components/Info";
 import Middle from "./components/Middle";
+import Footer from "./components/Footer";
 import "./app.css";
 
 const useScreenSize = () => {
@@ -38,6 +39,7 @@ function App() {
         para2="Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites."
         img="laptop"
       />
+      <Footer desktopOrMobile={desktopOrMobile} />
     </div>
   );
 }
