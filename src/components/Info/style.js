@@ -47,10 +47,6 @@ export const InfoDivider = styled.div`
     width: 720px;
     height: 1010px;
   }
-  /* mobile */
-  @media screen and (max-width: 375px) {
-    /* width: 375px; */
-  }
 `;
 
 export const InfoContent = styled.div`
@@ -100,7 +96,6 @@ export const InfoSubTitle = styled.h3`
 `;
 export const InfoPara = styled.p`
   /* both */
-
   color: #4b5862;
   font-weight: normal;
   /* desktop */
@@ -108,7 +103,6 @@ export const InfoPara = styled.p`
     font-size: 17px;
     line-height: 26px;
   }
-
   /* mobile */
   @media screen and (max-width: 375px) {
     width: 279px;
