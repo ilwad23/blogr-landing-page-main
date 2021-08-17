@@ -54,13 +54,12 @@ export const InfoContent = styled.div`
   /* desktop */
   @media screen and (min-width: 376px) {
     margin-top: 300px;
-    /* margin-left: 160px; */
     margin-left: ${({ turn }) => (turn ? "160px" : "0px")};
   }
   /* mobile */
   @media screen and (max-width: 375px) {
     width: 375px;
-    height: 828px;
+    margin-bottom: ${({ turn }) => (turn ? "100px" : "0px")};
     margin-top: 30px;
   }
 `;
@@ -119,6 +118,6 @@ export const InfoPara = styled.p`
 export const InfoImg = styled.img`
   /* mobile */
   @media screen and (max-width: 375px) {
-    margin-top: 158px;
+    margin-top: ${({ turn }) => (turn ? "160px" : "0px")};
   }
 `;
