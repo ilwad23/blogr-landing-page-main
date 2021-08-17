@@ -11,41 +11,29 @@ import {
 } from "./style.js";
 import "../../app.css";
 
-function Info({ desktopOrMobile }) {
+function Info({ desktopOrMobile, title, subtitle1, subtitle2, para1, para2,img }) {
   return (
-      <InfoWrapper>
-      <InfoTitle>Designed for the future</InfoTitle>
-        <InfoDivider>
-          <InfoContent>
-            <InfoText>
-              <InfoSubTitle>Introducing an extensible editor</InfoSubTitle>
-              <InfoPara>
-                Blogr features an exceedingly intuitive interface which lets you
-                focus on one thing: creating content. The editor supports
-                management of multiple blogs and allows easy manipulation of
-                embeds such as images, videos, and Markdown. Extensibility with
-                plugins and themes provide easy ways to add functionality or
-                change the looks of a blog.
-              </InfoPara>
-            </InfoText>
-            <InfoText>
-              <InfoSubTitle>Robust content management</InfoSubTitle>
-              <InfoPara>
-                Flexible content management enables users to easily move through
-                posts. Increase the usability of your blog by adding customized
-                categories, sections, format, or flow. With this functionality,
-                you’re in full control.
-              </InfoPara>
-            </InfoText>
-          </InfoContent>
-        </InfoDivider>
-        <InfoDivider>
-          <InfoImg
-            src={`./images/design-illustration-${desktopOrMobile}.svg`}
-            alt="design-illustration"
-          />
-        </InfoDivider>
-      </InfoWrapper>
+    <InfoWrapper turn={title}>
+      <InfoTitle>{title}</InfoTitle>
+      <InfoDivider>
+        <InfoContent turn={title}>
+          <InfoText>
+            <InfoSubTitle>{subtitle1}</InfoSubTitle>
+            <InfoPara>{para1}</InfoPara>
+          </InfoText>
+          <InfoText>
+            <InfoSubTitle>{subtitle2}</InfoSubTitle>
+            <InfoPara>{para2}</InfoPara>
+          </InfoText>
+        </InfoContent>
+      </InfoDivider>
+      <InfoDivider>
+        <InfoImg
+          src={`./images/${img}-${desktopOrMobile}.svg`}
+          alt="design-illustration"
+        />
+      </InfoDivider>
+    </InfoWrapper>
   );
 }
 
