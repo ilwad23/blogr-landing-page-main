@@ -11,6 +11,7 @@ export const InfoWrapper = styled.div`
   @media screen and (min-width: 376px) {
     width: 1440px;
     height: 1010px;
+    flex-direction: ${({ turn }) => (turn ? "row" : "row-reverse")};
   }
   /* mobile */
   @media screen and (max-width: 375px) {
@@ -53,7 +54,8 @@ export const InfoContent = styled.div`
   /* desktop */
   @media screen and (min-width: 376px) {
     margin-top: 300px;
-    margin-left: 160px;
+    /* margin-left: 160px; */
+    margin-left: ${({ turn }) => (turn ? "160px" : "0px")};
   }
   /* mobile */
   @media screen and (max-width: 375px) {
