@@ -29,6 +29,7 @@ function Info({ desktopOrMobile, title, subtitle1, subtitle2, para1, para2,img }
       </InfoDivider>
       <InfoDivider>
         <InfoImg
+          turn={title}
           src={`./images/${img}-${desktopOrMobile}.svg`}
           alt="design-illustration"
         />
