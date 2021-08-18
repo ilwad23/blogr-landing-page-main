@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: white;
-  background-color:crimson;
   line-height: 18px;
 }
 .btn {
@@ -20,3 +19,7 @@ body {
   width: 139px;
   height: 52px;
 }
+/* 
+.f:not(:first-of-type):hover {
+  background-color:crimson
+} */
