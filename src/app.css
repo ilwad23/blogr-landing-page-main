@@ -13,15 +13,10 @@ body {
   background-color:crimson;
   line-height: 18px;
 }
-
 .btn {
   font-weight: 700;
   border-radius: 100px;
   box-sizing: border-box;
   width: 139px;
   height: 52px;
-
 }
-/* .f:first-of-type {
-  background-color: darkgreen;
-} */
