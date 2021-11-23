@@ -3,9 +3,10 @@ import { Hero, BgShapes, Hook, Title, SubTitle, Start, Learn } from "./style";
 import Nav from "./Nav";
 
 function Header({ desktopOrMobile }) {
+
   return (
     <Hero>
-      <BgShapes src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt="logo" />
+      <BgShapes src="./images/bg-shapes-desktop.svg" alt="bg" />
       <Nav desktopOrMobile={desktopOrMobile} />
       <Hook>
         <Title>A modern publishing platform</Title>

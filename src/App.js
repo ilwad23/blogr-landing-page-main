@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Header desktopOrMobile={desktopOrMobile} />
-      <Info
+      {/* <Info
         desktopOrMobile={desktopOrMobile}
         title="Designed for the future"
         subtitle1="Introducing an extensible editor"
@@ -39,7 +39,7 @@ function App() {
         para2="Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites."
         img="laptop"
       />
-      <Footer desktopOrMobile={desktopOrMobile} />
+      <Footer desktopOrMobile={desktopOrMobile} /> */}
     </div>
   );
 }
