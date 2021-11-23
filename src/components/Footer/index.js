@@ -5,8 +5,8 @@ function Footer({ desktopOrMobile }) {
   return (
     <FooterWrapper>
       <FooterLogo src="./images/logo.svg" alt="logo" />
-      <FooterLinks>
-        <FooterLink>Overview</FooterLink>
+      <FooterLinks >
+        <FooterLink >Overview</FooterLink>
         <FooterLink>Pricing</FooterLink>
         <FooterLink>Marketplace</FooterLink>
         <FooterLink>Features</FooterLink>

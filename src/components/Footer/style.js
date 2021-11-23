@@ -52,12 +52,12 @@ export const FooterLink = styled.p`
   &:first-of-type {
     margin-bottom: 30px;
     font-weight: 500;
-    cursor: none;
+    cursor:active; 
   }
   &:not(:first-of-type):active {
     text-decoration: underline;
   }
-  cursor: pointer;
+  cursor: pointer; 
   width: 100%;
   text-align: center;
   margin-bottom: 15px;
