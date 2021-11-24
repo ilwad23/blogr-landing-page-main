@@ -11,10 +11,10 @@
   &__bg {
     width: $widthPage;
     height: 100%;
+    img {
+      width: 100vw;
+    }
   }
 }
 
-.hook {
-    position: absolute;
-    top: 0;
-}
+

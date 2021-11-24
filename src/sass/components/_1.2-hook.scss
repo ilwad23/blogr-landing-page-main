@@ -1,0 +1,57 @@
+@use "../abstracts" as *;
+.hook {
+  position: absolute;
+  top: 0;
+  width: $widthPage;
+  height: 100%;
+  @include center-item;
+  &__wrapper {
+    @include center-item;
+  }
+  &__title {
+    font-family: Overpass;
+    font-weight: 600;
+    width: 80vw;
+    font-size: 60px;
+    line-height: 92px;
+    text-align: center;
+    word-wrap: break-word;
+    @include mobile {
+      font-size: 31.7px;
+      line-height: 127.1%;
+    }
+  }
+  &__subTitle {
+    text-align: center;
+    width: 70vw;
+    font-size: 19.5px;
+    line-height: 22px;
+    margin-bottom: 40px;
+    @include mobile {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__btns {
+    display: flex;
+    &-start {
+      border: none;
+      color: #ff4d5c;
+      cursor: pointer;
+      &:hover {
+        background: #fe7c87;
+        color: white;
+      }
+    }
+    &-learn {
+      border: 1px solid #ffffff;
+      background-color: transparent;
+      color: #fbf9fb;
+      cursor: pointer;
+      &:hover {
+        background: #fbf9fb;
+        border: none;
+        color: #ff4d5c;
+      }
+    }
+  }}

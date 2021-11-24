@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
-// import "./sass/main.scss";
+import "./sass/main.scss";
 // import "./app.css";
 
 const useScreenSize = () => {
@@ -11,14 +11,14 @@ const useScreenSize = () => {
     };
     window.addEventListener("resize", handleResize);
   }, []);
-  return size > 375? "desktop" : "mobile";
+  return size > 555? "desktop" : "mobile";
 };
 
 function App() {
 const desktopOrMobile = useScreenSize();
   return (
     <div className="app">
-      {/* <Header desktopOrMobile={desktopOrMobile} /> */}
+      <Header desktopOrMobile={desktopOrMobile} />
     </div>
   );
 }
