@@ -1,0 +1,18 @@
+// desktop -950px
+// mobile -550px
+
+@mixin desktop {
+  @media all and (min-width: 951px) {
+    @content;
+  }
+}
+@mixin table {
+  @media all and (max-width: 950px) and (min-width: 551px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media all and (max-width: 550px) {
+    @content;
+  }
+}

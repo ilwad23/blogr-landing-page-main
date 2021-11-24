@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../../app.css";
 import {
   NavBar,
   NavLogo,
@@ -16,7 +15,7 @@ import {
   NavArrow,
   NavButtonWrapper,
   NavButton,
-} from "./style";
+} from "./navStyle";
 function Nav({ desktopOrMobile }) {
   const [toggle, setToggle] = useState(true);
   const onToggle = toggle ? "open" : "close";
