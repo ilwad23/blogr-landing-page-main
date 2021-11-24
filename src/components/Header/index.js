@@ -8,10 +8,10 @@ function Header({ desktopOrMobile }) {
       <div className="hero__bg">
         <img src={`./images/bg-shapes-${desktopOrMobile}.svg`} />
       </div>
-      {/* <BgShapes src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt="logo" />
-      <Nav desktopOrMobile={desktopOrMobile} />
-    */}
-      <Hook />
+      <div className="hero__wrapper">
+        <Nav desktopOrMobile={desktopOrMobile} />
+        <Hook />
+      </div>
     </div>
   );
 }

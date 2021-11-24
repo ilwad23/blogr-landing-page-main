@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import "./sass/main.scss";
-// import "./app.css";
 
 const useScreenSize = () => {
   const [size, setSize] = useState(window.innerWidth);

@@ -1,7 +1,5 @@
 @use "../abstracts" as *;
 .hook {
-  position: absolute;
-  top: 0;
   width: $widthPage;
   height: 100%;
   @include center-item;
@@ -38,6 +36,7 @@
       border: none;
       color: #ff4d5c;
       cursor: pointer;
+       margin-right: 16px;
       &:hover {
         background: #fe7c87;
         color: white;
