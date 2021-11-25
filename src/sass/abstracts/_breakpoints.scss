@@ -1,8 +1,13 @@
 // desktop -950px
 // mobile -550px
 
-@mixin desktop {
+@mixin up-desktop {
   @media all and (min-width: 951px) {
+    @content;
+  }
+}
+@mixin down-desktop {
+  @media all and (max-width: 950px) {
     @content;
   }
 }
@@ -11,7 +16,12 @@
     @content;
   }
 }
-@mixin mobile {
+@mixin up-mobile {
+  @media all and (min-width: 551px) {
+    @content;
+  }
+}
+@mixin down-mobile {
   @media all and (max-width: 550px) {
     @content;
   }

@@ -1,21 +1,5 @@
 import React, { useState } from "react";
-import {
-  NavBar,
-  NavLogo,
-  NavMenuIcon,
-  NavMenu,
-  NavLeft,
-  NavRight,
-  NavLinks,
-  NavLink,
-  NavMain,
-  NavDropDownMenu,
-  NavListitem,
-  NavLinkTitle,
-  NavArrow,
-  NavButtonWrapper,
-  NavButton,
-} from "./navStyle";
+
 function Nav({ desktopOrMobile }) {
   const [toggle, setToggle] = useState(true);
   const onToggle = toggle ? "open" : "close";
@@ -34,59 +18,59 @@ function Nav({ desktopOrMobile }) {
       ${toggle ? "navBar__menu--hide" : "navBar__menu--show"}`}
           show={toggle}
         >
-          <div className='navBar__left'>
-            <NavLinks>
-              <NavLink>
-                <NavMain>
-                  <NavLinkTitle>Products</NavLinkTitle>
-                  <NavArrow
-                    src={`./images/icon-arrow-${desktopOrMobile}.svg`}
-                    alt="arrow"
-                  />
-                </NavMain>
-                <NavDropDownMenu className="a">
-                  <NavListitem>Overview</NavListitem>
-                  <NavListitem>Pricing</NavListitem>
-                  <NavListitem>Marketplace</NavListitem>
-                  <NavListitem>Features</NavListitem>
-                  <NavListitem>Integration</NavListitem>
-                </NavDropDownMenu>
-              </NavLink>
-              <NavLink>
-                <NavMain>
-                  <NavLinkTitle>Company</NavLinkTitle>
-                  <NavArrow
-                    src={`./images/icon-arrow-${desktopOrMobile}.svg`}
-                    alt="arrow"
-                  />
-                </NavMain>
-                <NavDropDownMenu className="a">
-                  <NavListitem>About</NavListitem>
-                  <NavListitem>Team</NavListitem>
-                  <NavListitem>Blog</NavListitem>
-                  <NavListitem>Careers</NavListitem>
-                </NavDropDownMenu>
-              </NavLink>
-              <NavLink>
-                <NavMain>
-                  <NavLinkTitle>Connect</NavLinkTitle>
-                  <NavArrow
-                    src={`./images/icon-arrow-${desktopOrMobile}.svg`}
-                    alt="arrow"
-                  />
-                </NavMain>
-                <NavDropDownMenu className="a">
-                  <NavListitem>Contact</NavListitem>
-                  <NavListitem>Newsletter</NavListitem>
-                  <NavListitem>Linkedin</NavListitem>
-                </NavDropDownMenu>
-              </NavLink>
-            </NavLinks>
+          <div className="navBar__left">
+            <div className="navBar__link">
+              <div className="navBar__link__main">
+                <p className='navBar__p'>Products</p>
+                <img
+                  src={`./images/icon-arrow-${desktopOrMobile}.svg`}
+                  alt="arrow"
+                />
+              </div>
+              <div className="navBar__dropDownMenu">
+                <div className='navBar__listItem'>Overview</div>
+                <div className='navBar__listItem'>Pricing</div>
+                <div className='navBar__listItem'>Marketplace</div>
+                <div className='navBar__listItem'>Features</div>
+                <div className='navBar__listItem'>Integration</div>
+              </div>
+            </div>
+            <div className="navBar__link">
+              <div className="navBar__link__main">
+                <p className='navBar__p'>Company</p>
+                <img
+                  src={`./images/icon-arrow-${desktopOrMobile}.svg`}
+                  alt="arrow"
+                />
+              </div>
+              <div className="navBar__dropDownMenu">
+                <div className='navBar__listItem'>About</div>
+                <div className='navBar__listItem'>Team</div>
+                <div className='navBar__listItem'>Blog</div>
+                <div className='navBar__listItem'>Careers</div>
+              </div>
+            </div>
+            <div className="navBar__link">
+              <div className="navBar__link__main">
+                <p className='navBar__p'>Connect</p>
+                <img
+                  src={`./images/icon-arrow-${desktopOrMobile}.svg`}
+                  alt="arrow"
+                />
+              </div>
+              <div className="navBar__dropDownMenu">
+                <div className='navBar__listItem'>Contact</div>
+                <div className='navBar__listItem'>Newsletter</div>
+                <div className='navBar__listItem'>Linkedin</div>
+              </div>
+            </div>
           </div>
-          <NavRight>
-            <NavLinkTitle className="login">Login</NavLinkTitle>
-            <NavButton className="btn">Sign Up</NavButton>
-          </NavRight>
+          <div className="navBar__right">
+            <p className="navBar__login navBar__p">
+              Login
+            </p>
+            <button className="navBar__btn btn">Sign Up</button>
+          </div>
         </div>
       </div>
     </nav>

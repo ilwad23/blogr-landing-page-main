@@ -1,37 +1,39 @@
 @use "../abstracts" as *;
 
 .navBar {
-  width: 100vw;
+  width: $widthPage;
   height: 100%;
   text-align: center;
   margin-top: 3vw;
   margin-bottom: 7vw;
+
   &__wrapper {
     width: 80vw;
     padding: 0 25px;
     margin: auto;
-    height: 83px;
+    height: $navHeight;
     @include seperate-items-start;
-    @include mobile {
+    @include down-mobile {
       padding: 0;
       width: 90vw;
       @include seperate-items-between;
     }
   }
+
   &__logo,
   &__menuIcon {
     cursor: pointer;
   }
   &__menuIcon {
     display: none;
-    @include mobile {
+    @include down-mobile {
       display: block;
     }
   }
   &__menu {
     @include seperate-items-between;
     flex-grow: 1;
-    @include mobile {
+    @include down-mobile {
       position: absolute;
       left: 5vw;
       top: 100px;
@@ -52,10 +54,127 @@
   }
   &__left {
     @include seperate-items-between;
-    height: 83px;
-    @include mobile {
+    height: $navHeight;
+    margin-left: 40px;
+    @include down-mobile {
       display: block;
       height: fit-content;
+      margin: 0;
+    }
+  }
+  &__link {
+    @include seperate-items-between;
+    height: $navHeight;
+    position: relative;
+    @include down-mobile {
+      flex-direction: column;
+      justify-content: center;
+      height: fit-content;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
+    &__main {
+      @include seperate-items-center;
+      padding: 5px 0;
+      img {
+        width: 10px;
+        height: 7px;
+        .navBar__link:hover & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include seperate-items-between;
+    height: $navHeight;
+    @include down-mobile {
+      display: block;
+      border-top: 1.8px solid #e1eeee;
+      height: fit-content;
+      text-align: center;
+      margin: 0 25px;
+    }
+  }
+  &__login {
+    &:active {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    @include down-mobile {
+      padding: 30px 0;
+    }
+  }
+  &__btn {
+    background: #ffffff;
+    border: none;
+    color: #ff4d5c;
+    margin-left: 30px;
+    &:hover {
+      background: #fe7c87;
+      color: white;
+    }
+    @include down-mobile {
+      background: $gradient;
+      color: white;
+      margin-left: 20px;
+    }
+  }
+  &__dropDownMenu {
+    border-radius: 4px;
+    .navBar__link:hover & {
+      display: block;
+    }
+    display: none;
+    position: absolute;
+    width: 168px;
+    top: 80px;
+    background: #ffffff;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.25);
+    @include down-mobile {
+      background-color: blue;
+      position: static;
+      width: 80vw;
+      text-align: center;
+      margin: 15px 0;
+      background: #f0eef2;
+      border-radius: 4px;
+      box-shadow: none;
+    }
+  }
+  &__listItem {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #1f3c58;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    text-align: start;
+    @include down-mobile {
+      text-align: center;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+  }
+  &__p {
+    cursor: pointer;
+    padding-right: 10px;
+    padding-left: 30px;
+    .navBar__link:hover & {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    @include down-mobile {
+      color: #1f3c58;
+      font-weight: 500;
+      .navBar__link:hover & {
+        font-weight: 400;
+        text-decoration: none;
+      }
     }
   }
 }
