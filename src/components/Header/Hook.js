@@ -4,7 +4,7 @@ function Hook() {
   const state = useStateValue()[0];
   return (
     state.toggle && (
-      <div className="hook">
+      <section className="hook">
         <div className="hook__wrapper">
           <h1 className="hook__title">A modern publishing platform</h1>
           <p className="hook__subTitle">
@@ -17,7 +17,7 @@ function Hook() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     )
   );
 }

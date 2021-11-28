@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 function Header({ desktopOrMobile }) {
   return (
-    <div className="hero">
+    <header className="hero">
       <div className="hero__bg">
         <img src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt='bg-shapes'/>
       </div>
@@ -12,7 +12,7 @@ function Header({ desktopOrMobile }) {
         <Nav desktopOrMobile={desktopOrMobile} />
         <Hook />
       </div>
-    </div>
+    </header>
   );
 }
 
