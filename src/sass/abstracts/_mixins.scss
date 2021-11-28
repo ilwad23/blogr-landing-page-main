@@ -1,0 +1,32 @@
+// GERNERAL MIXINS
+@mixin center-item {
+  display: grid;
+  place-items: center;
+}
+@mixin seperate-items-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin seperate-items-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin seperate-col-items-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+@mixin seperate-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+// SPECIFIC MINXINS
+@mixin btn($border,$clr,$bg) {
+  border: $border;
+  color: $clr;
+  background: $bg;
+}

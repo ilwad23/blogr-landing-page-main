@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Info from "./components/Info";
-import "./app.css";
+import "./sass/main.scss";
 
 const useScreenSize = () => {
   const [size, setSize] = useState(window.innerWidth);
@@ -17,7 +17,7 @@ const useScreenSize = () => {
 function App() {
 const desktopOrMobile = useScreenSize();
   return (
-    <div className="App">
+    <div className="app">
       <Header desktopOrMobile={desktopOrMobile} />
       <Info desktopOrMobile={desktopOrMobile} />
     </div>
