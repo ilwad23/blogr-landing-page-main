@@ -1,5 +1,4 @@
-@use "../abstracts" as *;
-
+@use "../../abstracts" as *;
 .hero {
   position: relative;
   width: $widthPage;
@@ -10,16 +9,13 @@
     width: $widthPage;
     height: 100%;
     img {
-      width: 100vw;
+      width: $widthPage;
     }
   }
   &__wrapper {
     position: absolute;
     top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 100%;
+    @include seperate-col-items-start;
   }
 }
-
-

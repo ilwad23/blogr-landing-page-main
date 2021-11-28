@@ -10,7 +10,7 @@ const useScreenSize = () => {
     };
     window.addEventListener("resize", handleResize);
   }, []);
-  return size > 555? "desktop" : "mobile";
+  return size > 585? "desktop" : "mobile";
 };
 
 function App() {

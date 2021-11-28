@@ -1,22 +1,19 @@
-import React, { useState } from "react";
-
-function Nav({ desktopOrMobile }) {
-  const [toggle, setToggle] = useState(true);
-  const onToggle = toggle ? "open" : "close";
+import React from "react";
+import { useStateValue } from "../../states/StateProvider";
+function Nav({ desktopOrMobile }) {  const [{ toggle, onToggle }, dispatch] = useStateValue();
   return (
     <nav className="navBar">
       <div className="navBar__wrapper">
         <img className="navBar__logo" src="./images/logo.svg" alt="logo" />
         <img
           className="navBar__menuIcon"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => dispatch({type:'toggle'})}
           src={`./images/icon-${onToggle}.svg`}
           alt="nav menu icon"
         />
         <div
           className={`navBar__menu
       ${toggle ? "navBar__menu--hide" : "navBar__menu--show"}`}
-          show={toggle}
         >
           <div className="navBar__left">
             <div className="navBar__link">

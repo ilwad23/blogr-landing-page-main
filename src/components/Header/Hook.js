@@ -1,7 +1,9 @@
-import React from 'react'
-
+import React from "react";
+import { useStateValue } from "../../states/StateProvider";
 function Hook() {
-    return (
+  const state = useStateValue()[0];
+  return (
+    state.toggle && (
       <div className="hook">
         <div className="hook__wrapper">
           <h1 className="hook__title">A modern publishing platform</h1>
@@ -16,7 +18,8 @@ function Hook() {
           </div>
         </div>
       </div>
-    );
+    )
+  );
 }
 
-export default Hook
+export default Hook;

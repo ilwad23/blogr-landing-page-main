@@ -1,27 +1,33 @@
-@use "../abstracts" as *;
+@use "../../abstracts" as *;
 
 .navBar {
   width: $widthPage;
-  height: 100%;
+  height: $navHeight;
   text-align: center;
   margin-top: 3vw;
   margin-bottom: 7vw;
 
   &__wrapper {
-    width: 80vw;
-    padding: 0 25px;
-    margin: auto;
+    width: 90vw;
     height: $navHeight;
-    @include seperate-items-start;
+    margin: auto;
+    @include up-desktop {
+      padding: 0 25px;
+    }
+    @include table {
+      padding: 0;
+    }
     @include down-mobile {
       padding: 0;
       width: 90vw;
       @include seperate-items-between;
     }
+    @include seperate-items-start;
   }
 
   &__logo,
-  &__menuIcon {
+  &__menuIcon,
+  &__btn {
     cursor: pointer;
   }
   &__menuIcon {
@@ -56,6 +62,9 @@
     @include seperate-items-between;
     height: $navHeight;
     margin-left: 40px;
+    @include table {
+      margin-left: 0px;
+    }
     @include down-mobile {
       display: block;
       height: fit-content;
@@ -107,17 +116,16 @@
     }
   }
   &__btn {
-    background: #ffffff;
-    border: none;
-    color: #ff4d5c;
+    @include btn(none, $dark-pink, white);
     margin-left: 30px;
     &:hover {
-      background: #fe7c87;
-      color: white;
+      @include btn(none, white, $light-pink);
+    }
+    @include table {
+      margin-left: 0;
     }
     @include down-mobile {
-      background: $gradient;
-      color: white;
+      @include btn(none, white, $gradient);
       margin-left: 20px;
     }
   }
@@ -133,7 +141,6 @@
     background: #ffffff;
     box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.25);
     @include down-mobile {
-      background-color: blue;
       position: static;
       width: 80vw;
       text-align: center;
@@ -167,6 +174,9 @@
     .navBar__link:hover & {
       text-decoration: underline;
       font-weight: 700;
+    }
+    @include table {
+      font-size: 12px;
     }
     @include down-mobile {
       color: #1f3c58;

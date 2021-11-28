@@ -1,5 +1,5 @@
 // desktop -950px
-// mobile -550px
+// mobile -580px
 
 @mixin up-desktop {
   @media all and (min-width: 951px) {
@@ -12,17 +12,17 @@
   }
 }
 @mixin table {
-  @media all and (max-width: 950px) and (min-width: 551px) {
+  @media all and (max-width: 950px) and (min-width: 581px) {
     @content;
   }
 }
 @mixin up-mobile {
-  @media all and (min-width: 551px) {
+  @media all and (min-width: 581px) {
     @content;
   }
 }
 @mixin down-mobile {
-  @media all and (max-width: 550px) {
+  @media all and (max-width: 580px) {
     @content;
   }
 }

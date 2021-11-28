@@ -6,7 +6,7 @@ function Header({ desktopOrMobile }) {
   return (
     <div className="hero">
       <div className="hero__bg">
-        <img src={`./images/bg-shapes-${desktopOrMobile}.svg`} />
+        <img src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt='bg-shapes'/>
       </div>
       <div className="hero__wrapper">
         <Nav desktopOrMobile={desktopOrMobile} />
