@@ -8,12 +8,12 @@ export const InfoWrapper = styled.div`
   display: flex;
   color: #1f3c58;
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     width: 1440px;
     height: 1010px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     flex-direction: column-reverse;
   }
 `;
@@ -22,7 +22,7 @@ export const InfoTitle = styled.h2`
   position: absolute;
   font-weight: 900;
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     width: 406px;
     height: 46px;
     left: 527px;
@@ -32,7 +32,7 @@ export const InfoTitle = styled.h2`
     line-height: 57px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     width: 375px;
     height: 46px;
     top: 83px;
@@ -43,7 +43,7 @@ export const InfoTitle = styled.h2`
 `;
 export const InfoDivider = styled.div`
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     width: 720px;
     height: 1010px;
   }
@@ -51,12 +51,12 @@ export const InfoDivider = styled.div`
 
 export const InfoContent = styled.div`
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     margin-top: 300px;
     margin-left: 160px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     width: 375px;
     height: 828px;
     margin-top: 30px;
@@ -65,12 +65,12 @@ export const InfoContent = styled.div`
 
 export const InfoText = styled.div`
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     width: 563px;
     height: 255px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     text-align: center;
   }
 `;
@@ -79,12 +79,12 @@ export const InfoSubTitle = styled.h3`
   font-weight: 700;
   font-size: 27.5px;
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     line-height: 42px;
     margin-bottom: 20px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     width: 262px;
     height: 60px;
     margin-left: 57px;
@@ -99,12 +99,12 @@ export const InfoPara = styled.p`
   color: #4b5862;
   font-weight: normal;
   /* desktop */
-  @media screen and (min-width: 376px) {
+  @media screen and (min-width: 586px) {
     font-size: 17px;
     line-height: 26px;
   }
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     width: 279px;
     height: 247px;
     margin-top: 30px;
@@ -116,7 +116,7 @@ export const InfoPara = styled.p`
 `;
 export const InfoImg = styled.img`
   /* mobile */
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 585px) {
     margin-top: 158px;
   }
 `;
