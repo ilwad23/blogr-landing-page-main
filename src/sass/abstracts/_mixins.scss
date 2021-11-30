@@ -13,10 +13,21 @@
   align-items: center;
   justify-content: flex-start;
 }
+@mixin seperate-items-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 @mixin seperate-col-items-start {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: column;
+}
+@mixin seperate-col-items-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   flex-direction: column;
 }
 @mixin seperate-items-center {
@@ -24,8 +35,26 @@
   align-items: center;
   justify-content: flex-start;
 }
+@mixin position-ab-l($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin position-ab-r($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+@mixin section-size {
+  width: 100vw;
+  height: 100%;
+}
+@mixin size($width:100%,$height:100%) {
+  width: $width;
+  height: $height;
+}
 // SPECIFIC MINXINS
-@mixin btn($border,$clr,$bg) {
+@mixin btn($border, $clr, $bg) {
   border: $border;
   color: $clr;
   background: $bg;
