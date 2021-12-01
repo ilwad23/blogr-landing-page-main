@@ -2,7 +2,7 @@ import React from "react";
 import { FooterWrapper, FooterLogo, FooterLinks, FooterLink } from "./style.js";
 function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
       <img className="footer__logo" src="./images/logo.svg" alt="logo" />
       <ul className="footer__links">
         <li className="footer__link">Overview</li>

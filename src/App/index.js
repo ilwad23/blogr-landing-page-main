@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from "./1-Header";
-import Main from "./2-Main";
-import Footer from "./3-Footer";
+import Header from "./components/1-Header";
+import Main from "./components/2-Main";
+import Footer from "./components/3-Footer";
 
 const useScreenSize = () => {
   const [size, setSize] = useState(window.innerWidth);

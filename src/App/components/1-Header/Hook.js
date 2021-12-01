@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateValue } from "../../states/StateProvider";
+import { useStateValue } from "../../../states/StateProvider";
 function Hook() {
   const state = useStateValue()[0];
   return (

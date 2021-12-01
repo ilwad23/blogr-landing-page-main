@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateValue } from "../../states/StateProvider";
+import { useStateValue } from "../../../states/StateProvider";
 function Nav({ desktopOrMobile }) {  const [{ toggle, onToggle }, dispatch] = useStateValue();
   return (
     <nav className="navBar">
