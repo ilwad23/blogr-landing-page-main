@@ -3,11 +3,19 @@
   display: grid;
   place-items: center;
 }
+
+// flex row
 @mixin seperate-items-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@mixin seperate-items-around-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
 @mixin seperate-items-start {
   display: flex;
   align-items: center;
@@ -18,6 +26,14 @@
   align-items: center;
   justify-content: flex-end;
 }
+@mixin seperate-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+// flex col
 @mixin seperate-col-items-start {
   display: flex;
   align-items: center;
@@ -30,11 +46,8 @@
   justify-content: flex-end;
   flex-direction: column;
 }
-@mixin seperate-items-center {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+
+
 @mixin position-ab-l($top: 0, $left: 0) {
   position: absolute;
   top: $top;
@@ -49,7 +62,7 @@
   width: 100vw;
   height: 100%;
 }
-@mixin size($width:100%,$height:100%) {
+@mixin size($width: 100%, $height: 100%) {
   width: $width;
   height: $height;
 }
