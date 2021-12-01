@@ -9,7 +9,6 @@ import {
   InfoPara,
   InfoImg,
 } from "./style.js";
-import "../../app.css";
 
 function Info({ desktopOrMobile, title, subtitle1, subtitle2, para1, para2,img }) {
   return (
