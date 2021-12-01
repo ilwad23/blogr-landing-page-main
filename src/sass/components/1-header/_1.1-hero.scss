@@ -1,0 +1,21 @@
+@use "../../util" as *;
+.hero {
+  position: relative;
+  width: $widthPage;
+  @include up-mobile {
+    background: $gradient;
+  }
+  &__bg {
+    width: $widthPage;
+    height: 100%;
+    img {
+      width: $widthPage;
+    }
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    @include seperate-col-items-start;
+  }
+}
