@@ -1,0 +1,78 @@
+@use "../../abstracts" as *;
+.middle {
+  font-family: Overpass;
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  border-radius: 0px 100px;
+  background-color: $middle-bg;
+  z-index: -100;
+
+  @include up-mobile {
+    &__wrapper {
+      @include position-ab-l;
+      @include seperate-items-start;
+    }
+    &__phoneImg {
+      width: 30vw;
+      margin-top: v(-54);
+      margin-left: v(167);
+    }
+    &__content {
+      @include size(37vw);
+      margin-right: rem(20);
+      margin-left: v(80);
+      .title {
+        margin-bottom: v(30);
+        font-size: v(36);
+        line-height: v(55);
+      }
+      .para {
+        font-size: v(17.5);
+        line-height: v(26.81);
+        margin-bottom: 10px;
+      }
+    }
+    &__bgCirclesImg {
+      z-index: -10;
+      border-top-left-radius: 100px;
+      @include size(50vw);
+    }
+  }
+  @include down-mobile {
+    margin-top: v(230, 375);
+
+    &__wrapper {
+      @include section-size;
+      text-align: center;
+      transform: translate(0, -20%);
+    }
+    &__phoneImg {
+      width: 100vw;
+      margin: 0 auto;
+    }
+    &__content {
+      margin: 0 auto;
+      text-align: center;
+      width: 80vw;
+      .title {
+        font-size: v(33, 375);
+        line-height: v(55.6, 375);
+        span {
+          display: block;
+        }
+      }
+      .para {
+        font-size: v(14.5, 375);
+        line-height: v(22, 375);
+        margin-bottom: v(80, 375);
+      }
+    }
+    &__bgCirclesImg {
+      @include position-ab-l;
+      border-top-right-radius: 100px;
+      z-index: -10;
+      width: 100vw;
+    }
+  }
+}
