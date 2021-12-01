@@ -1,30 +1,29 @@
 import React from "react";
 import { FooterWrapper, FooterLogo, FooterLinks, FooterLink } from "./style.js";
-import "../../app.css";
-function Footer({ desktopOrMobile }) {
+function Footer() {
   return (
-    <FooterWrapper>
-      <FooterLogo src="./images/logo.svg" alt="logo" />
-      <FooterLinks >
-        <FooterLink >Overview</FooterLink>
-        <FooterLink>Pricing</FooterLink>
-        <FooterLink>Marketplace</FooterLink>
-        <FooterLink>Features</FooterLink>
-        <FooterLink>Integration</FooterLink>
-      </FooterLinks>
-      <FooterLinks>
-        <FooterLink>Team</FooterLink>
-        <FooterLink>About</FooterLink>
-        <FooterLink>Blog</FooterLink>
-        <FooterLink>Careers</FooterLink>
-      </FooterLinks>
-      <FooterLinks>
-        <FooterLink>Company</FooterLink>
-        <FooterLink>Contact</FooterLink>
-        <FooterLink>Newsletter</FooterLink>
-        <FooterLink>Linkedin</FooterLink>
-      </FooterLinks>
-    </FooterWrapper>
+    <footer>
+      <img className="footer__logo" src="./images/logo.svg" alt="logo" />
+      <ul className="footer__links">
+        <li className="footer__link">Overview</li>
+        <li className="footer__link">Pricing</li>
+        <li className="footer__link">Marketplace</li>
+        <li className="footer__link">Features</li>
+        <li className="footer__link">Integration</li>
+      </ul>
+      <ul className="footer__links">
+        <li className="footer__link">Team</li>
+        <li className="footer__link">About</li>
+        <li className="footer__link">Blog</li>
+        <li className="footer__link">Careers</li>
+      </ul>
+      <ul className="footer__links">
+        <li className="footer__link">Company</li>
+        <li className="footer__link">Contact</li>
+        <li className="footer__link">Newsletter</li>
+        <li className="footer__link">Linkedin</li>
+      </ul>
+    </footer>
   );
 }
 
