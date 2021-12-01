@@ -10,9 +10,29 @@
   align-items: center;
   justify-content: space-between;
 }
+@mixin seperate-items-between-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@mixin seperate-items-between-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin seperate-items-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 @mixin seperate-items-around-start {
   display: flex;
   align-items: flex-start;
+  justify-content: space-around;
+}
+@mixin seperate-items-around-end {
+  display: flex;
+  align-items: flex-end;
   justify-content: space-around;
 }
 
