@@ -2,20 +2,16 @@
 .hero {
   position: relative;
   width: $widthPage;
-  @include up-mobile {
-    background: $gradient;
-  }
-  &__bg {
+  &__bg img {
     width: $widthPage;
-    height: 100%;
-    img {
-      width: $widthPage;
-    }
   }
   &__wrapper {
-    position: absolute;
-    top: 0;
-    height: 100%;
+    height: $fulHeight;
+    @include section-size;
+    @include pos-ab-t-l;
     @include seperate-col-items-start;
+  }
+  @include up-mobile {
+    background: $gradient;
   }
 }

@@ -52,7 +52,6 @@
   justify-content: flex-start;
 }
 
-
 // flex col
 @mixin seperate-col-items-start {
   display: flex;
@@ -67,13 +66,23 @@
   flex-direction: column;
 }
 
-
-@mixin position-ab-l($top: 0, $left: 0) {
+// position
+@mixin pos-ab-t-l($top: 0, $left: 0) {
   position: absolute;
   top: $top;
   left: $left;
 }
-@mixin position-ab-r($top: 0, $right: 0) {
+@mixin pos-ab-t-r($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+@mixin pos-ab-b-l($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin pos-ab-b-r($top: 0, $right: 0) {
   position: absolute;
   top: $top;
   right: $right;
