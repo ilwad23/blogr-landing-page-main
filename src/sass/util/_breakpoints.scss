@@ -11,7 +11,7 @@
     @content;
   }
 }
-@mixin table {
+@mixin tablet {
   @media all and (max-width: 950px) and (min-width: 581px) {
     @content;
   }

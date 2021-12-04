@@ -5,7 +5,7 @@ function Hook() {
   return (
     state.toggle && (
       <div className="hook">
-        <div className="hook__wrapper">
+        <div className="hook__container">
           <h1 className="hook__title">A modern publishing platform</h1>
           <p className="hook__subTitle">
             Grow your audience and build your online brand

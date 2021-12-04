@@ -1,17 +1,22 @@
 @use "../../util" as *;
 .hero {
+  // * block styles
   position: relative;
-  width: $widthPage;
+
+  // * element styles
+  &,
   &__bg img {
     width: $widthPage;
   }
-  &__wrapper {
+  &__container {
     height: $fulHeight;
-    @include section-size;
     @include pos-ab-t-l;
-    @include seperate-col-items-start;
+    @include flex-col($justify:flex-start,$dir:column);
   }
+
+  // * media queries
   @include up-mobile {
+    // * block styles
     background: $gradient;
   }
 }

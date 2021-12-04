@@ -1,26 +1,20 @@
-@use './util' as *;
+@use "./util" as *;
+// * general font format for the project 
 body {
-  font-size: 18px;
+  color: white;
   font-family: "Ubuntu" serif;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
   line-height: 18px;
-  color: white;
-  line-height: 18px;
-  
 }
 
+// * general button structure for the project
 .btn {
-  font-weight: 700;
   border-radius: 100px;
-  width: 8rem;
-  height: 3.5rem;
-  @include table {
-    width: 6rem;
-    height: 2.5rem;
+  @include size(3.5rem, 8em);
+  @include tablet {
     font-size: 12px !important;
-    
+    @include size(2.5rem, 8em);
   }
-
 }

@@ -6,9 +6,12 @@ function Header({ desktopOrMobile }) {
   return (
     <div className="hero">
       <div className="hero__bg">
-        <img src={`./images/bg-shapes-${desktopOrMobile}.svg`} alt='bg-shapes'/>
+        <img
+          src={`./images/bg-shapes-${desktopOrMobile}.svg`}
+          alt="bg-shapes"
+        />
       </div>
-      <div className="hero__wrapper">
+      <div className="hero__container">
         <Nav desktopOrMobile={desktopOrMobile} />
         <Hook />
       </div>

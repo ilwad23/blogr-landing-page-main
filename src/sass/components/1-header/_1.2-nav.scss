@@ -1,55 +1,113 @@
 @use "../../util" as *;
 
 .navBar {
+  // * block styles
   width: $widthPage;
   height: $navHeight;
   text-align: center;
   margin-top: 3vw;
   margin-bottom: 7vw;
-
-  &__wrapper {
-    width: 90vw;
-    height: $navHeight;
-    margin: auto;
-    @include up-desktop {
-      padding: 0 25px;
-    }
-    @include table {
-      padding: 0;
-    }
-    @include down-mobile {
-      padding: 0;
-      width: 90vw;
-      @include seperate-items-between;
-    }
-    @include seperate-items-start;
-  }
-
+  
+  // * element styles
   &__logo,
   &__menuIcon,
   &__btn {
     cursor: pointer;
   }
-  &__menuIcon {
-    display: none;
-    @include down-mobile {
-      display: block;
+  &__container,
+  &__links,
+  &__link,
+  &__right {
+    height: $navHeight;
+  }
+  &__container {
+    width: 80vw;
+    margin: auto;
+    @include flex-row($justify: flex-start);
+  }
+  &__menu,
+  &__links,
+  &__link,
+  &__right {
+    margin: 0;
+    position: relative;
+    @include flex-row;
+  }
+
+  &__mainLink {
+    padding: 5px 0;
+    @include flex-row($justify: center);
+  }
+  &__arrow {
+    @include size(7px, 10px);
+    .navBar__link:hover & {
+      transform: rotate(180deg);
     }
   }
-  &__menu {
-    @include seperate-items-between;
-    flex-grow: 1;
-    @include down-mobile {
-      position: absolute;
-      left: 5vw;
-      top: 100px;
-      width: 90vw;
-      background: #fbf9fb;
+
+  &__login {
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+  &__btn {
+    @include btn(none, $dark-pink, white);
+    &:active,
+    &:hover,
+    &:focus {
+      @include btn(none, white, $light-pink);
+    }
+  }
+
+  // * media queries
+  @include up-desktop {
+    // * element styles
+    &__container {
+      padding: 0 rem(25);
+    }
+    &__links {
+      margin-left: rem(40);
+    }
+    &__btn {
+      margin-left: 30px;
+    }
+  }
+  @include tablet {
+    &__logo {
+      font-size: 40px !important;
+      width: 90.9px !important;
+      height: 36px !important;
+    }
+    
+  }
+  @include up-mobile {
+    // * element styles
+    &__menuIcon {
+      display: none;
+    }
+    &__menu {
+      flex-grow: 1;
+    }
+  }
+  @include down-mobile {
+    // * element styles
+    &__container {
+      @include flex-row;
+    }
+    &__menu {
+      background: white;
+      border-radius: rem(6);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-      padding-top: 15px;
-      padding-bottom: 30px;
+      padding-bottom: rem(30);
+      padding-top: rem(15);
+      width: 90vw;
       z-index: 100;
+      @include pos-ab-t-l($top: 100px, $left: 5vw);
+
+      // * modifier styles
       &--hide {
         display: none;
       }
@@ -57,78 +115,33 @@
         display: block;
       }
     }
-  }
-  &__left {
-    @include seperate-items-between;
-    height: $navHeight;
-    margin-left: 40px;
-    @include table {
-      margin-left: 0px;
-    }
-    @include down-mobile {
+    &__links {
       display: block;
       height: fit-content;
-      margin: 0;
     }
-  }
-  &__link {
-    @include seperate-items-between;
-    height: $navHeight;
-    position: relative;
-    @include down-mobile {
+    &__link {
       flex-direction: column;
-      justify-content: center;
       height: fit-content;
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
+      justify-content: center;
+      margin:   10px 0;
+      padding: 0 7.5px;
     }
-    &__main {
-      @include seperate-items-center;
-      padding: 5px 0;
-      img {
-        width: 10px;
-        height: 7px;
-        .navBar__link:hover & {
-          transform: rotate(180deg);
-        }
-      }
+    &__right {
+      border-top: 1.8px solid #e1eeee;
+      display: block;
+      height: fit-content;
+      margin: 0 25px;
+      text-align: center;
+    }
+    &__login {
+      padding: 30px 0;
+    }
+    &__btn {
+      margin-left: 20px;
+      @include btn(none, white, $gradient);
     }
   }
 
-  &__right {
-    @include seperate-items-between;
-    height: $navHeight;
-    @include down-mobile {
-      display: block;
-      border-top: 1.8px solid #e1eeee;
-      height: fit-content;
-      text-align: center;
-      margin: 0 25px;
-    }
-  }
-  &__login {
-    &:active {
-      text-decoration: underline;
-      font-weight: 700;
-    }
-    @include down-mobile {
-      padding: 30px 0;
-    }
-  }
-  &__btn {
-    @include btn(none, $dark-pink, white);
-    margin-left: 30px;
-    &:hover {
-      @include btn(none, white, $light-pink);
-    }
-    @include table {
-      margin-left: 0;
-    }
-    @include down-mobile {
-      @include btn(none, white, $gradient);
-      margin-left: 20px;
-    }
-  }
   &__dropDownMenu {
     border-radius: 4px;
     .navBar__link:hover & {
@@ -175,7 +188,7 @@
       text-decoration: underline;
       font-weight: 700;
     }
-    @include table {
+    @include tablet {
       font-size: 12px;
     }
     @include down-mobile {
