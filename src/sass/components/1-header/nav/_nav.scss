@@ -1,0 +1,136 @@
+@use "../../../util" as *;
+
+.navBar {
+  // * block styles
+  width: $widthPage;
+  height: $navHeight;
+  text-align: center;
+  margin-top: 3vw;
+  margin-bottom: 7vw;
+
+  // * element styles
+  &__logo,
+  &__menuIcon,
+  &__btn,
+  &__p {
+    cursor: pointer;
+  }
+  &__container,
+  &__end {
+    height: $navHeight;
+  }
+  &__container {
+    width: 80vw;
+    margin: auto;
+    @include flex-row($justify: flex-start);
+  }
+  &__menu,
+  &__end {
+    @include flex-row;
+  }
+  &__login {
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+  &__btn {
+    @include btn(none, $dark-pink, white);
+    &:active,
+    &:hover,
+    &:focus {
+      @include btn(none, white, $light-pink);
+    }
+  }
+  &__p {
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 10px;
+    .link:hover & {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  // * media queries
+  @include up-desktop {
+    // * element styles
+    &__container {
+      padding: 0 rem(25);
+    }
+    &__btn {
+      margin-left: 30px;
+    }
+  }
+  @include tablet {
+    // * element styles
+    &__logo {
+      font-size: 40px !important;
+      width: 90.9px !important;
+      height: 36px !important;
+    }
+    &__p {
+      font-size: 12px;
+    }
+  }
+  @include up-mobile {
+    // * element styles
+    &__menuIcon {
+      display: none;
+    }
+    &__menu {
+      flex-grow: 1;
+    }
+  }
+  @include down-mobile {
+    // * element styles
+    &__container {
+      @include flex-row;
+    }
+    &__menu {
+      background: white;
+      border-radius: rem(6);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding-bottom: rem(30);
+      padding-top: rem(15);
+      width: 90vw;
+      z-index: 100;
+      @include pos-ab-t-l($top: 100px, $left: 5vw);
+
+      // * modifier styles
+      &--hide {
+        display: none;
+      }
+      &--show {
+        display: block;
+      }
+    }
+    &__end {
+      border-top: 1.8px solid #e1eeee;
+      display: block;
+      height: fit-content;
+      margin: 0 auto;
+      width: 80vw;
+    }
+    &__login {
+      padding: 30px 0;
+      padding-left: 20px;
+      text-align: center;
+      }
+    &__btn {
+      margin-left: 20px;
+      text-align: center;
+      @include btn(none, white, $gradient);
+    }
+    &__p {
+      color: #1f3c58;
+      font-weight: 500;
+      .link:hover & {
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+}
