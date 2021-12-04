@@ -1,6 +1,6 @@
 import React from "react";
 import Hook from "./Hook";
-import Nav from "./Nav";
+import Nav from "./Nav/";
 
 function Header({ desktopOrMobile }) {
   return (
