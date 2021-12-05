@@ -6,9 +6,11 @@ function Hook() {
     state.toggle && (
       <div className="hook">
         <div className="hook__container">
-          <h1 className="hook__title">A modern publishing platform</h1>
+          <h1 className="hook__title">
+            <span>A modern </span>publishing platform
+          </h1>
           <p className="hook__subTitle">
-            Grow your audience and build your online brand
+            Grow your audience and build your <span>online brand</span>
           </p>
           <div className="hook__btns">
             <button className="hook__btns-start  btn">Start for Free</button>
