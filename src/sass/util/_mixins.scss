@@ -1,7 +1,7 @@
 // * general mixins
 
 // * grid
-@mixin g-c {
+@mixin center-div {
   display: grid;
   place-items: center;
 }
