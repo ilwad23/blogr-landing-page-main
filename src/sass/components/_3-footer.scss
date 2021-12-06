@@ -1,35 +1,48 @@
 @use "../util" as *;
 .footer {
-    margin-top: 100px;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    background-color: $footer-bg;
-    &__logo {
-        margin-bottom: 50px;
+  // * block styles
+  background-color: $footer-bg;
+  border-top-right-radius: v(100);
+  padding-bottom: 50px;
+  padding-top: 40px;
+
+  // * element styles
+  &__container {
+    margin: 0 auto;
+    width: 80vw;
+    @include flex-row(flex-start, space-around);
+  }
+  &__logo {
+    margin-bottom: 50px;
+  }
+  &__links:nth-child(2) {
+    margin-left: 10px;
+  }
+  &__link {
+    color: rgba(233, 231, 231, 0.564);
+    font-weight: 300;
+    margin-bottom: 15px;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: underline;
     }
-    &__link {
-        color: rgba(233, 231, 231, 0.564);
-        font-weight: 300;
-        margin-bottom: 15px;
-        &:hover,
-        &:focus {
-            font-weight: 500;
-            text-decoration: underline;
-        }
-        &__title {
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
+    // * modifier styles
+    &--title {
+      margin-bottom: 30px;
+      font-weight: 700;
     }
-    
-    @include up-mobile {
-      border-top-right-radius: v(100);
-      @include seperate-items-around-start;
+  }
+
+  // * media queriers
+  @include down-mobile {
+    // * element styles
+    &__container {
+      border-top-right-radius: v(100, 375);
+      @include flex-col();
+      text-align: center;
     }
-    @include down-mobile {
-        border-top-right-radius: v(100,375);
-        @include seperate-col-items-start;
-    text-align: center;
     &__links:nth-child(3) {
       margin: 50px 0;
     }

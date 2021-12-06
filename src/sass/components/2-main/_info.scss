@@ -1,7 +1,7 @@
 @use "../../util" as *;
 
 .info {
-  @include section-size;
+  @include size;
   font-style: normal;
   font-family: Overpass;
   font-weight: 700;
@@ -19,19 +19,19 @@
     &,
     &__container {
       &.l {
-        @include seperate-items-end;
+        @include flex-row($justify: flex-end);
       }
       &.r {
-        @include seperate-items-start;
+        @include flex-row($justify: flex-start);
       }
     }
     &__container,
     &__title {
       &.l {
-        @include position-ab-l;
+        @include pos-ab-t-l;
       }
       &.r {
-        @include position-ab-r;
+        @include pos-ab-t-r;
       }
     }
     &__container {
@@ -67,7 +67,7 @@
     }
   }
   @include down-mobile {
-    @include section-size;
+    @include size;
     &__title,
     &__content {
       margin: 0 auto;
@@ -77,8 +77,8 @@
     &__title {
       margin-top: v(83, 375);
       margin-bottom: v(29, 375);
-      font-size: v(24,375);
-      line-height: v(37,375);
+      font-size: v(24, 375);
+      line-height: v(37, 375);
     }
     &__subTitle {
       margin-bottom: 10px;
@@ -87,11 +87,11 @@
       margin-top: v(30, 375);
     }
     &__para {
-      font-size: v(15,375);
+      font-size: v(15, 375);
       line-height: v(23.6, 375);
     }
     img {
-      @include section-size;
+      @include size;
     }
   }
 }
