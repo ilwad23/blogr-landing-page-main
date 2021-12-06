@@ -1,5 +1,5 @@
 @use "../../util" as *;
-.hero {
+.header {
   // * block styles
   position: relative;
 
@@ -11,7 +11,7 @@
   &__container {
     height: $fulHeight;
     @include pos-ab-t-l;
-    @include flex-col($justify:flex-start,$dir:column);
+    @include flex-col($justify: flex-start);
   }
 
   // * media queries

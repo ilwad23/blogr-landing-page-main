@@ -10,8 +10,11 @@
 
   @include up-mobile {
     &__wrapper {
-      @include position-ab-l;
-      @include seperate-items-start;
+      height: 100%;
+      width: 100%;
+      // background-color: crimson;
+      @include pos-ab-t-l;
+      @include flex-row($justify: flex-start);
     }
     &__phoneImg {
       width: 30vw;
@@ -19,7 +22,7 @@
       margin-left: v(167);
     }
     &__content {
-      @include size(37vw);
+      width: 37vw;
       margin-right: rem(20);
       margin-left: v(80);
       .title {
@@ -30,20 +33,20 @@
       .para {
         font-size: v(17.5);
         line-height: v(26.81);
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
       }
     }
     &__bgCirclesImg {
-      z-index: -10;
       border-top-left-radius: 100px;
-      @include size(50vw);
+      width: 50vw;
+      z-index: -10;
     }
   }
   @include down-mobile {
     margin-top: v(230, 375);
 
     &__wrapper {
-      @include section-size;
+      @include size;
       text-align: center;
       transform: translate(0, -20%);
     }
@@ -69,7 +72,7 @@
       }
     }
     &__bgCirclesImg {
-      @include position-ab-l;
+      @include pos-ab-t-l;
       border-top-right-radius: 100px;
       z-index: -10;
       width: 100vw;

@@ -4,18 +4,18 @@ import Nav from "./Nav/";
 
 function Header({ desktopOrMobile }) {
   return (
-    <div className="hero">
-      <div className="hero__bg">
+    <header className="header">
+      <div className="header__bg">
         <img
           src={`./images/bg-shapes-${desktopOrMobile}.svg`}
           alt="bg-shapes"
         />
       </div>
-      <div className="hero__container">
+      <div className="header__container">
         <Nav desktopOrMobile={desktopOrMobile} />
         <Hook />
       </div>
-    </div>
+    </header>
   );
 }
 

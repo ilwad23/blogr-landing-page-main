@@ -12,119 +12,12 @@
   align-items: $align;
   justify-content: $justify;
 }
-@mixin flex-col($align: center, $justify: space-between, $dir: row) {
+@mixin flex-col($align: center, $justify: space-between) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
-  flex-direction: $dir;
-}
-@mixin f-r-start-between {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-@mixin f-r-end-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-@mixin f-r-center-around {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-@mixin f-r-start-around {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-@mixin f-r-end-around {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-}
-@mixin f-r-center-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@mixin f-r-start-center {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-@mixin f-r-end-center {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-// * flex col
-@mixin f-c-center-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
 }
-@mixin f-c-start-between {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: column;
-}
-@mixin f-c-end-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-@mixin f-c-center-around {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-@mixin f-c-start-around {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-direction: column;
-}
-@mixin f-c-end-around {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
-}
-@mixin f-c-center-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-@mixin f-c-start-center {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-}
-@mixin f-c-end-center {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-}
-// @mixin separate-col-items-start {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// }
-// @mixin separate-col-items-end {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-//   flex-direction: column;
-// }
 
 // * position
 @mixin pos-ab-t-l($top: 0, $left: 0) {
@@ -148,15 +41,11 @@
   right: $right;
 }
 // * element size
-@mixin section-size {
-  height: 100%;
-  width: 100vw;
-}
 @mixin size($height: 100%, $width: 100%) {
   height: $height;
   width: $width;
 }
-// * SPECIFIC MINXINS
+// * specific mixins
 @mixin btn($border, $clr, $bg) {
   background: $bg;
   border: $border;
