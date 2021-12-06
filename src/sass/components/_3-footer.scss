@@ -37,11 +37,12 @@
 
   // * media queriers
   @include down-mobile {
+    margin-top: 100px;
     // * element styles
     &__container {
       border-top-right-radius: v(100, 375);
-      @include flex-col();
       text-align: center;
+      @include flex-col();
     }
     &__links:nth-child(3) {
       margin: 50px 0;

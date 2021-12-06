@@ -10,11 +10,15 @@ function Info({
   position,
 }) {
   return (
-    <section className={`info ${position}`}>
+    <section className={`info info--${position}`}>
       {title && (
         <h2 className={`info__title ${position}`}>Designed for the future</h2>
       )}
-      <img src={`./images/${desktopOrMobile}.svg`} alt={desktopOrMobile} />
+      <img
+        className="info__img"
+        src={`./images/${desktopOrMobile}.svg`}
+        alt={desktopOrMobile}
+      />
       <div className={`info__container ${position}`}>
         <div className="info__content">
           <div className="info__content-1">
