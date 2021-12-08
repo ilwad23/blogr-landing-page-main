@@ -4,7 +4,7 @@
   font-weight: 700;
   font-style: normal;
   position: relative;
-  border-radius: 0px 100px;
+  border-radius: 0px v(100);
   background-color: $middle-bg;
   z-index: -100;
 
@@ -12,7 +12,6 @@
     &__wrapper {
       height: 100%;
       width: 100%;
-      // background-color: crimson;
       @include pos-ab-t-l;
       @include flex-row($justify: flex-start);
     }
@@ -33,11 +32,10 @@
       .para {
         font-size: v(17.5);
         line-height: v(26.81);
-        // margin-bottom: 10px;
       }
     }
     &__bgCirclesImg {
-      border-top-left-radius: 100px;
+      border-top-left-radius: v(100);
       width: 50vw;
       z-index: -10;
     }
@@ -73,7 +71,7 @@
     }
     &__bgCirclesImg {
       @include pos-ab-t-l;
-      border-top-right-radius: 100px;
+      border-top-right-radius: v(100,375);
       z-index: -10;
       width: 100vw;
     }
