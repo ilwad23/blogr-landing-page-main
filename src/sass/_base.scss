@@ -1,6 +1,8 @@
 @use "./util" as *;
-// * general font format for the project 
-body {
+// * general font format for the project
+body,
+.container {
+  @include size();
   color: white;
   font-family: "Ubuntu" serif;
   font-size: 18px;
