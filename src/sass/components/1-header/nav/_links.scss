@@ -1,0 +1,52 @@
+@use "../../../util" as *;
+
+.links {
+  // * block styles
+  height: $navHeight;
+  margin: 0;
+  @include flex-row;
+
+  // * media queries
+  @include up-desktop {
+    // * element styles
+    & {
+      margin-left: rem(40);
+    }
+  }
+  @include down-mobile {
+    // * element styles
+    & {
+      display: block;
+      height: fit-content;
+    }
+  }
+}
+.link {
+  // * block styles
+  height: $navHeight;
+  position: relative;
+  @include flex-row;
+
+  // * element styles
+  &__mainContent {
+    padding: 5px 0;
+    @include flex-row($justify: center);
+  }
+  &__arrow {
+    @include size(7px, 10px);
+    .link:hover & {
+      transform: rotate(180deg);
+    }
+  }
+
+  // * media queries
+  @include down-mobile {
+    // * block styles
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 0 7.5px;
+  }
+}
+

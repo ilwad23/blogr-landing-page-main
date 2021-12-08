@@ -1,0 +1,22 @@
+@use "../../util" as *;
+.header {
+  // * block styles
+  position: relative;
+
+  // * element styles
+  &,
+  &__bg img {
+    width: $widthPage;
+  }
+  &__container {
+    height: $fulHeight;
+    @include pos-ab-t-l;
+    @include flex-col($justify: flex-start);
+  }
+
+  // * media queries
+  @include up-mobile {
+    // * block styles
+    background: $gradient;
+  }
+}

@@ -1,0 +1,107 @@
+@use "../../util" as *;
+
+.info {
+  // * block styles
+  color: $dark-blue;
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 700;
+  position: relative;
+  @include size;
+
+  // * element styles
+  // * element styles
+  &__title {
+    text-align: center;
+    font-weight: 900;
+  }
+  &__para {
+    color: $grey;
+    font-weight: 400;
+  }
+
+  // * media queriers
+  @include up-mobile {
+    // * element styles
+    &,
+    &__container {
+      // * modifier styles
+      &--left {
+        @include flex-row($justify: flex-end);
+      }
+      &--right {
+        @include flex-row($justify: flex-start);
+      }
+    }
+    &__container,
+    &__title {
+      // * modifier styles
+      &--left {
+        @include pos-ab-t-l;
+      }
+      &--right {
+        @include pos-ab-t-r;
+      }
+    }
+    &__container {
+      @include size($width: 50vw);
+      background-color: transparent;
+    }
+    &__title {
+      width: 100vw;
+      line-height: v(57);
+      font-size: v(37);
+      margin-top: v(120);
+      margin-top: v(20, 650);
+    }
+    &__content {
+      margin-left: rem(5);
+    }
+    &__content > div:first-child {
+      margin-bottom: v(61);
+    }
+    &__subTitle {
+      font-size: v(27.5);
+      line-height: v(42);
+      margin-bottom: v(21);
+    }
+    &__para {
+      width: 50ch;
+      font-size: v(17.4);
+      line-height: v(27);
+    }
+    &__img {
+      width: 50vw;
+    }
+  }
+  @include down-mobile {
+    // * block styles
+    @include size;
+    // * element styles
+    &__title,
+    &__content {
+      margin: 0 auto;
+      text-align: center;
+      width: 80vw;
+    }
+    &__title {
+      margin-top: v(83, 375);
+      margin-bottom: v(29, 375);
+      font-size: v(24, 375);
+      line-height: v(37, 375);
+    }
+    &__subTitle {
+      margin-bottom: 10px;
+      font-size: v(26.5, 375);
+      line-height: v(27.3, 375);
+      margin-top: v(30, 375);
+    }
+    &__para {
+      font-size: v(15, 375);
+      line-height: v(23.6, 375);
+    }
+    &__img {
+      @include size;
+    }
+  }
+}

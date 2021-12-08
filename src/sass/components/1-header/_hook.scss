@@ -1,0 +1,78 @@
+@use "../../util" as *;
+.hook {
+  // * block styles
+  flex: 1;
+  width: $widthPage;
+  height: 100%;
+  @include center-div;
+
+  // * element styles
+  &__container {
+    margin-top: -$navHeight;
+    @include center-div;
+  }
+  &__title {
+    font-family: Overpass;
+    font-size: v(60);
+    font-weight: 600;
+    line-height: v(92);
+    text-align: center;
+    word-wrap: break-word;
+  }
+  &__subTitle {
+    font-size: v(20);
+    line-height: v(23);
+    margin-bottom: v(40);
+    text-align: center;
+  }
+  &__btns {
+    display: flex;
+    // * modifier styles
+    &-start {
+      cursor: pointer;
+      margin-right: 16px;
+      @include btn(none, $dark-pink, white);
+      &:hover {
+        @include btn(none, white, $light-pink);
+      }
+    }
+    &-learn {
+      cursor: pointer;
+      @include btn(1px solid #ffffff, white, transparent);
+      &:hover {
+        @include btn(none, $dark-pink, white);
+      }
+    }
+  }
+
+  // * media queries
+  @include tablet {
+    // * element styles
+    &__title {
+      font-size: v(33, 758);
+      line-height: v(32, 758);
+    }
+    &__subTitle {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: v(22, 758);
+    }
+  }
+  @include down-mobile {
+    // * element styles
+    &__title {
+      font-size: v(30, 375);
+      line-height: v(40, 375);
+      margin-bottom: 15px;
+    }
+    &__subTitle {
+      font-size: v(18,375);
+      line-height: v(20,375);
+      margin-bottom: 40px;
+    }
+    &__title span,
+    &__subTitle span {
+      display: block;
+    }
+  }
+}
