@@ -36,6 +36,9 @@
   }
 
   // * media queriers
+  @include up-mobile {
+  font-size: v(16,900);
+  }
   @include down-mobile {
     margin-top: 100px;
     // * element styles
