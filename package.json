@@ -1,6 +1,6 @@
 {
-  "name": "blogr-landing-page-main-react",
-  "homepage": "https://github.com/ilwad23/blogr-landing-page-main.git,",
+  "name": "blogr-landing-page-main",
+  "homepage": "http://1ilwad23.github.io/blogr-landing-page-main",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
